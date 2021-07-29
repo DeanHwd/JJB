@@ -1,0 +1,28 @@
+- job-template:
+    name: 'test-job-template-{variant}'
+    builders:
+    - shell:
+        echo "{repos}"
+
+- project:
+    name: test-project
+    repos_common:
+    - repo-1
+    - repo-2
+    jobs:
+    - 'test-job-template-{variant}':
+        variant: 'a'
+        repos: !j2-yaml: |
+            {% for repo in repos_common %}
+            - {{ repo }}
+            {% endfor %}
+            - repo-a1
+            - repo-a2
+    - 'test-job-template-{variant}':
+        variant: 'b'
+        repos: !j2-yaml: |
+            {% for repo in repos_common %}
+            - {{ repo }}
+            {% endfor %}
+            - repo-b1
+            - repo-b2

@@ -1,0 +1,7 @@
+- job:
+    name: test_job
+    project-type: pipeline
+    dsl: |
+      build job: "job1"
+    triggers:
+    - timed: '@daily'

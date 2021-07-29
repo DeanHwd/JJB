@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <triggers class="vector">
+    <org.jenkinsci.plugins.ghprb.GhprbTrigger>
+      <configVersion>3</configVersion>
+      <spec/>
+      <cron/>
+      <adminlist/>
+      <whitelist/>
+      <orgslist/>
+      <blackListCommitAuthor/>
+      <whiteListLabels/>
+      <blackListLabels/>
+      <excludedRegions/>
+      <includedRegions/>
+      <buildDescTemplate/>
+      <allowMembersOfWhitelistedOrgsAsAdmin>false</allowMembersOfWhitelistedOrgsAsAdmin>
+      <triggerPhrase/>
+      <skipBuildPhrase/>
+      <onlyTriggerPhrase>false</onlyTriggerPhrase>
+      <useGitHubHooks>false</useGitHubHooks>
+      <permitAll>false</permitAll>
+      <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
+      <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
+      <whiteListTargetBranches/>
+      <blackListTargetBranches/>
+    </org.jenkinsci.plugins.ghprb.GhprbTrigger>
+  </triggers>
+</project>

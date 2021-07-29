@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <builders>
+    <hudson.plugins.groovy.SystemGroovy>
+      <source class="hudson.plugins.groovy.StringSystemScriptSource">
+        <script>
+          <script>println 'Hello'</script>
+          <sandbox>true</sandbox>
+          <classpath>
+            <entry>
+              <url>file:/home/user/example.jar</url>
+            </entry>
+          </classpath>
+        </script>
+      </source>
+      <bindings>EXAMPLE=foo-bar</bindings>
+    </hudson.plugins.groovy.SystemGroovy>
+  </builders>
+</project>

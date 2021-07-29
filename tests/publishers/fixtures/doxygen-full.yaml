@@ -1,0 +1,6 @@
+publishers:
+  - doxygen:
+      doxyfile: "Doxyfile"
+      slave: "doxygen-slave"
+      keep-all: true
+      folder: "build"

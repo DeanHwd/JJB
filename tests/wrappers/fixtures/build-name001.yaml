@@ -1,0 +1,6 @@
+wrappers:
+  - build-name:
+      name: Build-${FOO}
+      description: lorem ipsum dolor
+      run-at-start: true
+      run-at-end: false

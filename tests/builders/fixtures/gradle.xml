@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <builders>
+    <hudson.plugins.gradle.Gradle>
+      <description/>
+      <buildFile>build.gradle</buildFile>
+      <tasks>init
+build
+tests
+</tasks>
+      <rootBuildScriptDir>${workspace}/tests</rootBuildScriptDir>
+      <gradleName>gradle-1.2</gradleName>
+      <useWrapper>true</useWrapper>
+      <makeExecutable>true</makeExecutable>
+      <fromRootBuildScriptDir>true</fromRootBuildScriptDir>
+      <passAllAsSystemProperties>true</passAllAsSystemProperties>
+      <passAllAsProjectProperties>true</passAllAsProjectProperties>
+      <switches>-g /foo/bar/.gradle
+-PmavenUserName=foobar</switches>
+    </hudson.plugins.gradle.Gradle>
+  </builders>
+</project>

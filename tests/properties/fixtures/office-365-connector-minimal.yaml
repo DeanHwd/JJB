@@ -1,0 +1,4 @@
+properties:
+  - office-365-connector:
+      webhooks:
+        - url: http://outlook.office.com/webhook

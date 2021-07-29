@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <triggers class="vector">
+    <org.jenkinsci.plugins.ghprb.GhprbTrigger>
+      <configVersion>3</configVersion>
+      <spec>* * * * *</spec>
+      <cron>* * * * *</cron>
+      <adminlist>user1
+user2</adminlist>
+      <whitelist>user3
+user4</whitelist>
+      <orgslist>org1
+org2</orgslist>
+      <blackListCommitAuthor>blacklist commit author</blackListCommitAuthor>
+      <whiteListLabels>label1
+label2</whiteListLabels>
+      <blackListLabels>label3
+label4</blackListLabels>
+      <excludedRegions>exclude
+region</excludedRegions>
+      <includedRegions>include
+region</includedRegions>
+      <buildDescTemplate>build description</buildDescTemplate>
+      <allowMembersOfWhitelistedOrgsAsAdmin>true</allowMembersOfWhitelistedOrgsAsAdmin>
+      <triggerPhrase>retest this please</triggerPhrase>
+      <skipBuildPhrase>no tests</skipBuildPhrase>
+      <onlyTriggerPhrase>true</onlyTriggerPhrase>
+      <useGitHubHooks>true</useGitHubHooks>
+      <permitAll>true</permitAll>
+      <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
+      <displayBuildErrorsOnDownstreamBuilds>true</displayBuildErrorsOnDownstreamBuilds>
+      <whiteListTargetBranches>
+        <org.jenkinsci.plugins.ghprb.GhprbBranch>
+          <branch>master</branch>
+        </org.jenkinsci.plugins.ghprb.GhprbBranch>
+        <org.jenkinsci.plugins.ghprb.GhprbBranch>
+          <branch>testing</branch>
+        </org.jenkinsci.plugins.ghprb.GhprbBranch>
+      </whiteListTargetBranches>
+      <blackListTargetBranches>
+        <org.jenkinsci.plugins.ghprb.GhprbBranch>
+          <branch>master</branch>
+        </org.jenkinsci.plugins.ghprb.GhprbBranch>
+        <org.jenkinsci.plugins.ghprb.GhprbBranch>
+          <branch>testing</branch>
+        </org.jenkinsci.plugins.ghprb.GhprbBranch>
+      </blackListTargetBranches>
+      <gitHubAuthId>123-456-789</gitHubAuthId>
+      <extensions>
+        <org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+          <commitStatusContext>status context</commitStatusContext>
+          <triggeredStatus>triggered status message</triggeredStatus>
+          <startedStatus>started</startedStatus>
+          <statusUrl>url/to/status</statusUrl>
+          <addTestResults>false</addTestResults>
+          <completedStatus>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>success message</message>
+              <result>SUCCESS</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>failure message</message>
+              <result>FAILURE</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>error message</message>
+              <result>ERROR</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+          </completedStatus>
+        </org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+        <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildStatus>
+          <messages>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>success comment</message>
+              <result>SUCCESS</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>failure comment</message>
+              <result>FAILURE</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>error-comment</message>
+              <result>ERROR</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+          </messages>
+        </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildStatus>
+        <org.jenkinsci.plugins.ghprb.extensions.build.GhprbCancelBuildsOnUpdate/>
+        <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbCommentFile>
+          <commentFilePath>/tmp/path</commentFilePath>
+        </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbCommentFile>
+        <org.jenkinsci.plugins.ghprb.extensions.status.GhprbNoCommitStatus/>
+      </extensions>
+    </org.jenkinsci.plugins.ghprb.GhprbTrigger>
+  </triggers>
+</project>

@@ -1,0 +1,4 @@
+builders:
+  - tox:
+      ini: "foo.conf"
+      toxenv-pattern: TOX_ENV

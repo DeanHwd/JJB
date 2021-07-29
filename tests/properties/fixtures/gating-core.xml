@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <properties>
+    <io.jenkins.plugins.gating.ResourceRequirementProperty plugin="gating-core">
+      <resources class="java.util.Collections$UnmodifiableRandomAccessList" resolves-to="java.util.Collections$UnmodifiableList">
+        <c class="list">
+          <string>external/ci.example.com</string>
+          <string>foo/bar/baz</string>
+        </c>
+        <list reference="../c"/>
+      </resources>
+    </io.jenkins.plugins.gating.ResourceRequirementProperty>
+  </properties>
+</project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <properties>
+    <jenkins.plugins.office365connector.WebhookJobProperty plugin="Office-365-Connector">
+      <webhooks>
+        <jenkins.plugins.office365connector.Webhook>
+          <url>http://outlook.office.com/webhook</url>
+          <name/>
+          <startNotification>false</startNotification>
+          <notifySuccess>true</notifySuccess>
+          <notifyAborted>false</notifyAborted>
+          <notifyNotBuilt>false</notifyNotBuilt>
+          <notifyUnstable>true</notifyUnstable>
+          <notifyFailure>true</notifyFailure>
+          <notifyBackToNormal>true</notifyBackToNormal>
+          <notifyRepeatedFailure>false</notifyRepeatedFailure>
+          <timeout>30000</timeout>
+        </jenkins.plugins.office365connector.Webhook>
+      </webhooks>
+    </jenkins.plugins.office365connector.WebhookJobProperty>
+  </properties>
+</project>

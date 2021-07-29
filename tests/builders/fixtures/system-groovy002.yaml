@@ -1,0 +1,6 @@
+builders:
+  - system-groovy:
+      command: "println 'Hello'"
+      bindings: "EXAMPLE=foo-bar"
+      class-path: "file:/home/user/example.jar"
+      sandbox: true
