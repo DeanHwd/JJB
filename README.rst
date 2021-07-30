@@ -88,7 +88,7 @@ tests samples are included as examples in our documentation to ensure that
 examples are kept current with existing behaviour. To run the unit tests,
 execute the command::
 
-    tox -e py34,py27
+    tox -e py36,py27
 
 * Note: View ``tox.ini`` to run tests on other versions of Python,
   generating the documentation and additionally for any special notes
@@ -116,3 +116,11 @@ Then install the required python packages using pip_::
 * _tox: https://tox.readthedocs.io/en/latest
 * _libyaml: https://pyyaml.org/wiki/LibYAML
 * _pip: https://pypi.org/project/pip
+
+Build .whl
+---------------------------
+
+Useage::
+
+    $ export PBR_VERSION=x.x.x
+    $ python setup.py bdist_wheel

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <publishers>
+    <org.jenkinsci.plugins.qywechat.QyWechatNotification plugin="qy-wechat-notification@1.0.2">
+      <webhookUrl>https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx</webhookUrl>
+      <mentionedId>123456</mentionedId>
+      <mentionedMobile>18010101010</mentionedMobile>
+      <failNotify>true</failNotify>
+      <failSend>true</failSend>
+      <successSend>true</successSend>
+      <aboutSend>true</aboutSend>
+      <unstableSend>true</unstableSend>
+      <startBuild>true</startBuild>
+    </org.jenkinsci.plugins.qywechat.QyWechatNotification>
+  </publishers>
+</project>
