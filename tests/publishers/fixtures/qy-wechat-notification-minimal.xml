@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <publishers>
+    <org.jenkinsci.plugins.qywechat.QyWechatNotification plugin="qy-wechat-notification@1.0.2">
+      <webhookUrl/>
+      <mentionedId/>
+      <mentionedMobile/>
+      <failNotify>false</failNotify>
+      <failSend>false</failSend>
+      <successSend>false</successSend>
+      <aboutSend>false</aboutSend>
+      <unstableSend>false</unstableSend>
+      <startBuild>false</startBuild>
+    </org.jenkinsci.plugins.qywechat.QyWechatNotification>
+  </publishers>
+</project>
