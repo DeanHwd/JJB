@@ -8311,6 +8311,55 @@ def packer(registry, xml_parent, data):
                 )
 
 
+def qy_wechat_notification(registry, xml_parent, data):
+    """yaml: qy-wechat-notification
+    This plugin is used to notification build status to qy wechat.
+
+    Requires the Jenkins :jenkins-plugins:`Qy Wechat Notification Plugin
+    <qy-wechat-notification>`.
+
+    :arg str webhook-url: webhook url from qiye wechat robot user
+    :arg str mentioned-id: Colour of building state (default 'blue')
+    :arg str mentioned-mobile: Colour of successful state (default 'green')
+    :arg boolean failnotify: only build failed to @someone
+    :arg boolean failsend: only build failed to send message
+    :arg boolean successsend: only build success to send message
+    :arg boolean aboutsend: only build abort to send message
+    :arg boolean unstablesend: only build unstable to send message
+    :arg boolean startbuild: send message before build start
+
+    Full Example:
+
+        .. literalinclude::
+           /../../tests/publishers/fixtures/qy-wechat-notification-full.yaml
+           :language: yaml
+
+    Minimal Example:
+
+        .. literalinclude::
+           /../../tests/publishers/fixtures/qy-wechat-notification-minimal.yaml
+           :language: yaml
+    """
+
+    qy_wechat = XML.SubElement(
+        xml_parent, "org.jenkinsci.plugins.qywechat.QyWechatNotification"
+    )
+    qy_wechat.set("plugin", "qy-wechat-notification@1.0.2")
+
+    build_mapping = [
+        ("webhook-url", "webhookUrl", ""),
+        ("mentioned-id", "mentionedId", ""),
+        ("mentioned-mobile", "mentionedMobile", ""),
+        ("failnotify", "failNotify", False),
+        ("failsend", "failSend", False),
+        ("successsend", "successSend", False),
+        ("abortsend", "aboutSend", False),
+        ("unstablesend", "unstableSend", False),
+        ("startbuild", "startBuild", False),
+    ]
+    helpers.convert_mapping_to_xml(qy_wechat, data, build_mapping, fail_required=True)
+
+
 class Publishers(jenkins_jobs.modules.base.Base):
     sequence = 70
 

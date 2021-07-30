@@ -1,0 +1,11 @@
+publishers:
+  - qy-wechat-notification:
+      webhook-url: https://qyapi.weixin.qq.com/cgi-bin/webhook/send?key=xxx
+      mentioned-id: 123456
+      mentioned-mobile: 18010101010
+      failnotify: true
+      failsend: true
+      successsend: true
+      abortsend: true
+      unstablesend: true
+      startbuild: true
